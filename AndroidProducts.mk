@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_miatoll.mk
+    $(LOCAL_DIR)/cherish_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_miatoll-ap1a-user \
-    aosp_miatoll-ap1a-userdebug \
-    aosp_miatoll-ap1a-eng
+    cherish_miatoll-ap1a-user \
+    cherish_miatoll-ap1a-userdebug \
+    cherish_miatoll-ap1a-eng
