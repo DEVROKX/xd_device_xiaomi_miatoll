@@ -17,7 +17,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit some common CherishOS stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit from miatoll device
 $(call inherit-product, device/xiaomi/miatoll/device.mk)
@@ -25,33 +25,33 @@ $(call inherit-product, device/xiaomi/miatoll/device.mk)
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# CherishOS stuff.
+# ProjectMatrixx stuff.
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_INCLUDE_LIVE_WALLPAPERS := true
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_ENABLE_BLUR := true
 TARGET_USES_AOSP_RECOVERY := true
 
-# CherishOS Build.
+# Matrixx Build Info
+MATRIXX_BUILD_TYPE := Unofficial
+MATRIXX_MAINTAINER := RITESHROKX
+MATRIXX_CHIPSET := SD720G
+MATRIXX_BATTERY := 5020mAh
+MATRIXX_DISPLAY := 1080X2400
+
+# Gapps Build
 WITH_GMS := true
 TARGET_GAPPS_ARCH := arm64
-#CHERISH_VANILLA := true
-#TARGET_USES_PICO_GAPPS := true
-USE_PIXEL_CHARGING := true
-TARGET_INCLUDE_CARRIER_SETTINGS := true
+BUILD_GOOGLE_CONTACTS := true
+BUILD_GOOGLE_DIALER := true
+BUILD_GOOGLE_MESSAGE := true
 
-# Nuke AudioFX
+#Exclude prebuilt apps
 TARGET_EXCLUDES_AUDIOFX := true
+TARGET_EXCLUDES_AUXIO := true
+TARGET_EXCLUDES_VIA := true
 
-# CherishOS props
-CHERISH_BUILD_TYPE=OFFICIAL
-CHERISH_MAINTAINER := RITESHROKX
-CHERISH_CHIPSET := SD720G
-CHERISH_BATTERY := 5020mAh
-CHERISH_DISPLAY := 1080x2400
-
-PRODUCT_NAME := cherish_miatoll
+PRODUCT_NAME := lineage_miatoll
 PRODUCT_DEVICE := miatoll
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := SM6250

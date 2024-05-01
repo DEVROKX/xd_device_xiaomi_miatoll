@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/cherish_miatoll.mk
+    $(LOCAL_DIR)/lineage_miatoll.mk
 
 COMMON_LUNCH_CHOICES := \
-    cherish_miatoll-ap1a-user \
-    cherish_miatoll-ap1a-userdebug \
-    cherish_miatoll-ap1a-eng
+    lineage_miatoll-ap1a-user \
+    lineage_miatoll-ap1a-userdebug \
+    lineage_miatoll-ap1a-eng
