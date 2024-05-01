@@ -21,8 +21,6 @@ persist.vendor.audio.ras.enabled=false
 vendor.audio.offload.buffer.size.kb=256
 vendor.voice.path.for.pcm.voip=true
 vendor.audio.offload.multiaac.enable=true
-vendor.audio.dolby.ds2.enabled=false
-vendor.audio.dolby.ds2.hardbypass=false
 vendor.audio.offload.multiple.enabled=false
 vendor.audio.offload.passthrough=false
 ro.vendor.audio.sdk.ssr=false
@@ -158,6 +156,13 @@ vendor.display.enable_default_color_mode=1
 vendor.display.enable_null_display=0
 vendor.display.enable_optimize_refresh=1
 vendor.gralloc.disable_ubwc=0
+
+# Dolby
+persist.vendor.audio_fx.current=dolby
+vendor.audio.dolby.ds2.enabled=true
+vendor.audio.dolby.ds2.hardbypass=true
+ro.vendor.audio.dolby.dax.support=true
+ro.vendor.dolby.dax.version=DAX3_3.6.0.12_r1
 
 # FM
 vendor.hw.fm.init=0

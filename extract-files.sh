@@ -76,6 +76,14 @@ function blob_fixup() {
         # NOP out report_input_event()
          "${SIGSCAN}" -p "30 00 00 90 11 3a 42 f9" -P "30 00 00 90 1f 20 03 d5" -f "${2}"
             ;;
+        vendor/etc/seccomp_policy/vendor.qti.hardware.dsp.policy)
+            echo 'madvise: 1' >> ${2}
+            ;;
+        vendor/lib/libstagefright_soft_ddpdec.so | vendor/lib/libstagefright_soft_ac4dec.so | \
+        vendor/lib/libstagefrightdolby.so | vendor/lib64/libstagefright_soft_ddpdec.so | \
+        vendor/lib64/libdlbdsservice.so | vendor/lib64/libstagefright_soft_ac4dec.so | vendor/lib64/libstagefrightdolby.so)
+            "${PATCHELF}" --replace-needed "libstagefright_foundation.so" "libstagefright_foundation-v33.so" "${2}"
+            ;;
     esac
 }
 
