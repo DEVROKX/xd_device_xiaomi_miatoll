@@ -15,3 +15,6 @@ allow hal_audio_default system_suspend_hwservice:hwservice_manager find;
 
 allow hal_audio_default default_prop:file { getattr  map  open  read };
 
+# Dolby
+allow hal_audio_default hal_dms_hwservice:hwservice_manager find;
+binder_call(hal_audio_default, hal_dms_default)
